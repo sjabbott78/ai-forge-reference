@@ -43,6 +43,8 @@ The pipeline is built around two distinct sovereignty constraints that apply to 
 
 The operational model this produces: **rent the forge, own the weights**. From the moment the adapter is promoted to production, inference runs entirely on the platform's sovereign LLM VM cluster. The cloud touched the training data. It never touches production scan data.
 
+**Why the implementation isn't here:** The training scripts, `benchmark.py`, and scanner containers described throughout this repo exist in a private codebase — not because the pipeline doesn't work, but because it's the operational core of an active EASM platform. Publishing it would mean publishing the exact detection logic and classification thresholds that an adversary would want to test against before targeting the platform. The same sovereignty principle that keeps scan data off the public internet applies to the code that processes it.
+
 ---
 
 ## Repository Structure
